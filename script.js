@@ -93,6 +93,120 @@ numbers.forEach((number)=>{
                 }
                 break;
 
+            case "4":
+                 if(calc.inp1.entry === false && calc.inp1.dec === false){
+                    calc.inp1.value = (calc.inp1.value * 10) + 4;
+                    input1.innerHTML = calc.inp1.value;
+                }
+                else if(calc.inp1.entry === false && calc.inp1.dec === true){
+                    calc.inp1.value = `${calc.inp1.value}4`;
+                    input1.innerHTML = calc.inp1.value;
+                }
+                else if(calc.inp2.entry === false && calc.inp2.dec === false){
+                    calc.inp2.value = (calc.inp2.value * 10) + 4;
+                    input2.innerHTML = calc.inp2.value;
+                }
+                else{
+                    calc.inp2.value = `${calc.inp2.value}4`;
+                    input2.innerHTML = calc.inp2.value;
+                }
+                break;
+
+            case "5":
+                 if(calc.inp1.entry === false && calc.inp1.dec === false){
+                    calc.inp1.value = (calc.inp1.value * 10) + 5;
+                    input1.innerHTML = calc.inp1.value;
+                }
+                else if(calc.inp1.entry === false && calc.inp1.dec === true){
+                    calc.inp1.value = `${calc.inp1.value}5`;
+                    input1.innerHTML = calc.inp1.value;
+                }
+                else if(calc.inp2.entry === false && calc.inp2.dec === false){
+                    calc.inp2.value = (calc.inp2.value * 10) + 5;
+                    input2.innerHTML = calc.inp2.value;
+                }
+                else{
+                    calc.inp2.value = `${calc.inp2.value}5`;
+                    input2.innerHTML = calc.inp2.value;
+                }
+                break;
+
+            case "6":
+                 if(calc.inp1.entry === false && calc.inp1.dec === false){
+                    calc.inp1.value = (calc.inp1.value * 10) + 6;
+                    input1.innerHTML = calc.inp1.value;
+                }
+                else if(calc.inp1.entry === false && calc.inp1.dec === true){
+                    calc.inp1.value = `${calc.inp1.value}6`;
+                    input1.innerHTML = calc.inp1.value;
+                }
+                else if(calc.inp2.entry === false && calc.inp2.dec === false){
+                    calc.inp2.value = (calc.inp2.value * 10) + 6;
+                    input2.innerHTML = calc.inp2.value;
+                }
+                else{
+                    calc.inp2.value = `${calc.inp2.value}6`;
+                    input2.innerHTML = calc.inp2.value;
+                }
+                break;
+
+            case "7":
+                 if(calc.inp1.entry === false && calc.inp1.dec === false){
+                    calc.inp1.value = (calc.inp1.value * 10) + 7;
+                    input1.innerHTML = calc.inp1.value;
+                }
+                else if(calc.inp1.entry === false && calc.inp1.dec === true){
+                    calc.inp1.value = `${calc.inp1.value}7`;
+                    input1.innerHTML = calc.inp1.value;
+                }
+                else if(calc.inp2.entry === false && calc.inp2.dec === false){
+                    calc.inp2.value = (calc.inp2.value * 10) + 7;
+                    input2.innerHTML = calc.inp2.value;
+                }
+                else{
+                    calc.inp2.value = `${calc.inp2.value}7`;
+                    input2.innerHTML = calc.inp2.value;
+                }
+                break;
+
+            case "8":
+                 if(calc.inp1.entry === false && calc.inp1.dec === false){
+                    calc.inp1.value = (calc.inp1.value * 10) + 8;
+                    input1.innerHTML = calc.inp1.value;
+                }
+                else if(calc.inp1.entry === false && calc.inp1.dec === true){
+                    calc.inp1.value = `${calc.inp1.value}8`;
+                    input1.innerHTML = calc.inp1.value;
+                }
+                else if(calc.inp2.entry === false && calc.inp2.dec === false){
+                    calc.inp2.value = (calc.inp2.value * 10) + 8;
+                    input2.innerHTML = calc.inp2.value;
+                }
+                else{
+                    calc.inp2.value = `${calc.inp2.value}8`;
+                    input2.innerHTML = calc.inp2.value;
+                }
+                break;
+            
+            case "9":
+                 if(calc.inp1.entry === false && calc.inp1.dec === false){
+                    calc.inp1.value = (calc.inp1.value * 10) + 9;
+                    input1.innerHTML = calc.inp1.value;
+                }
+                else if(calc.inp1.entry === false && calc.inp1.dec === true){
+                    calc.inp1.value = `${calc.inp1.value}9`;
+                    input1.innerHTML = calc.inp1.value;
+                }
+                else if(calc.inp2.entry === false && calc.inp2.dec === false){
+                    calc.inp2.value = (calc.inp2.value * 10) + 9;
+                    input2.innerHTML = calc.inp2.value;
+                }
+                else{
+                    calc.inp2.value = `${calc.inp2.value}9`;
+                    input2.innerHTML = calc.inp2.value;
+                }
+                break;
+
             case ".":
                 if(calc.inp1.value === null){
                     calc.inp1.value = `0.`;
@@ -155,7 +269,7 @@ operands.forEach((operand)=>{
                         input1.innerHTML = calc.inp1.value;
                     }
                 }
-                else if(calc.op.entry === true && calc.inp2.entry === false){
+                else if(calc.op.entry === true && calc.inp2.entry === false && calc.inp2.value !== null){
                     ans = calculate(Number(calc.inp1.value), Number(calc.inp2.value), calc.op.value);
                     calc.inp1.value = Math.round(ans * 100) / 100;
                     input1.innerHTML = calc.inp1.value;
@@ -186,7 +300,7 @@ operands.forEach((operand)=>{
                         input1.innerHTML = calc.inp1.value;
                     }
                 }
-                else if(calc.op.entry === true && calc.inp2.entry === false){
+                else if(calc.op.entry === true && calc.inp2.entry === false && calc.inp2.value !== null){
                     ans = calculate(Number(calc.inp1.value), Number(calc.inp2.value), calc.op.value);
                     calc.inp1.value = Math.round(ans * 100) / 100;
                     input1.innerHTML = calc.inp1.value;
@@ -217,7 +331,7 @@ operands.forEach((operand)=>{
                         input1.innerHTML = calc.inp1.value;
                     }
                 }
-                else if(calc.op.entry === true && calc.inp2.entry === false){
+                else if(calc.op.entry === true && calc.inp2.entry === false && calc.inp2.value !== null){
                     ans = calculate(Number(calc.inp1.value), Number(calc.inp2.value), calc.op.value);
                     calc.inp1.value = Math.round(ans * 100) / 100;
                     input1.innerHTML = calc.inp1.value;
@@ -248,7 +362,7 @@ operands.forEach((operand)=>{
                         input1.innerHTML = calc.inp1.value;
                     }
                 }
-                else if(calc.op.entry === true && calc.inp2.entry === false){
+                else if(calc.op.entry === true && calc.inp2.entry === false && calc.inp2.value !== null){
                     ans = calculate(Number(calc.inp1.value), Number(calc.inp2.value), calc.op.value);
                     calc.inp1.value = Math.round(ans * 100) / 100;
                     input1.innerHTML = calc.inp1.value;
@@ -296,9 +410,56 @@ operands.forEach((operand)=>{
                 }
                 else{
                     alert("INVALID ENTRY!!!");
+                    calc.inp2.entry = false;
                 }
                 break;
+            
+            case "del":
+                if (calc.op.entry && (calc.inp2.value === null || calc.inp2.value === "")) {
+                    calc.op.value = null;
+                    calc.op.entry = false;
+                    operation.innerHTML = "";
+                    return;
+                }
 
+                // Case: Editing input2
+                if (calc.op.entry === true) {
+                    if (calc.inp2.value !== null) {
+                        calc.inp2.value = calc.inp2.value.toString().slice(0, -1);
+                        input2.innerHTML = calc.inp2.value;
+                        calc.inp2.entry = false;
+
+                        if (calc.inp2.value.includes(".")) {
+                            calc.inp2.dec = true;
+                        } else {
+                            calc.inp2.dec = false;
+                        }
+
+                        if (calc.inp2.value === "") {
+                            calc.inp2.value = null;
+                            input2.innerHTML = "";
+                        }
+                    }
+                }
+                // Case: Editing input1
+                else {
+                    if (calc.inp1.value !== null) {
+                        calc.inp1.value = calc.inp1.value.toString().slice(0, -1);
+                        input1.innerHTML = calc.inp1.value;
+                        calc.inp1.entry = false;
+
+                        if (calc.inp1.value.includes(".")) {
+                            calc.inp1.dec = true;
+                        } else {
+                            calc.inp1.dec = false;
+                        }
+
+                        if (calc.inp1.value === "") {
+                            calc.inp1.value = null;
+                            input1.innerHTML = "";
+                        }
+                    }
+                }
             default:
                 break;
         }
